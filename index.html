@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Can I Sell My Restaurant Without Losing Its True Business Value?</title>
+<meta name="description" content="How can I sell my restaurant without losing its true business value? Learn valuation, financial records, operations, reputation, assets, broker selection, and negotiation.">
+<link rel="icon" type="image/jpeg" href="https://images1.loopnet.com/i2/DgRmbTxWVXdMpvbHSEv7yqLHyOXFZMzsM3fZmtaLeJE/118/mike-santos.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --white:#ffffff;
+  --ink:#0e1013;
+  --ink-2:#23262b;
+  --body:#41454c;
+  --muted:#767b83;
+  --line:#e9eaed;
+  --card:#8F8F8F;
+  --card-soft:rgba(143,143,143,.10);
+  --radius:18px;
+  --shadow:0 22px 48px -28px rgba(15,17,21,.42);
+  --max:1080px;
+  --content:880px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background:var(--white);
+  color:var(--body);
+  line-height:1.8;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ============ PROGRESS BAR ============ */
+#progress{
+  position:fixed;top:0;left:0;height:3px;width:0%;
+  background:linear-gradient(90deg,var(--ink) 0%,var(--card) 100%);
+  z-index:999;transition:width .1s linear;
+}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:sticky;top:0;z-index:80;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--max);margin:0 auto;
+  padding:13px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{
+  width:46px;height:46px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--card);
+  box-shadow:0 8px 18px -12px rgba(15,17,21,.6);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.brand:hover img{transform:scale(1.06) rotate(-2deg)}
+.brand-name{
+  font-size:13.5px;font-weight:800;color:var(--ink);
+  letter-spacing:.01em;line-height:1.25;display:block;
+}
+.brand-sub{
+  display:block;font-size:10px;font-weight:600;color:var(--muted);
+  letter-spacing:.18em;text-transform:uppercase;margin-top:2px;
+}
+.btn-dark{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--ink);color:#fff;
+  padding:12px 22px;border-radius:999px;
+  font-size:13.5px;font-weight:600;letter-spacing:.02em;
+  text-decoration:none;border:1px solid var(--ink);
+  transition:transform .3s ease, background .3s ease, box-shadow .3s ease;
+  white-space:nowrap;
+}
+.btn-dark:hover{
+  background:var(--ink-2);transform:translateY(-2px);
+  box-shadow:0 16px 30px -18px rgba(15,17,21,.85);
+}
+.btn-dark svg{width:15px;height:15px;flex:0 0 auto}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:76px 24px 58px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(143,143,143,.18), transparent 46%),
+    radial-gradient(circle at 88% -6%, rgba(143,143,143,.14), transparent 42%),
+    var(--white);
+}
+.hero::after{
+  content:"";position:absolute;right:-90px;bottom:-120px;
+  width:340px;height:340px;border-radius:50%;
+  border:1px solid rgba(143,143,143,.28);
+  pointer-events:none;
+}
+.hero-inner{max-width:var(--content);margin:0 auto;position:relative;z-index:2}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--ink);color:#fff;
+  font-size:10.5px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;
+  padding:9px 17px;border-radius:999px;margin-bottom:26px;
+}
+.eyebrow .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--card);
+  box-shadow:0 0 0 4px rgba(143,143,143,.35);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 3px rgba(143,143,143,.30)}
+  50%{box-shadow:0 0 0 8px rgba(143,143,143,0)}
+}
+h1{
+  font-size:clamp(1.85rem, 4.2vw, 3.1rem);
+  line-height:1.14;
+  font-weight:800;
+  letter-spacing:-.022em;
+  color:var(--ink);
+  margin:0 0 24px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  font-size:12.5px;font-weight:600;color:var(--muted);
+  letter-spacing:.03em;
+}
+.hero-meta .chip{
+  background:var(--card-soft);
+  border:1px solid rgba(143,143,143,.28);
+  color:var(--ink-2);
+  padding:6px 14px;border-radius:999px;
+  font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+}
+.hero-meta .sep{width:4px;height:4px;border-radius:50%;background:var(--card)}
+
+/* ============ CONTENT ============ */
+.content{
+  max-width:var(--content);
+  margin:0 auto;
+  padding:56px 24px 20px;
+}
+.content p{
+  margin:0 0 22px;
+  font-size:1.015rem;
+  color:var(--body);
+  font-weight:400;
+}
+.content a{
+  color:var(--ink);
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:2px solid var(--card);
+  padding-bottom:1px;
+  transition:color .28s ease, border-bottom-color .28s ease;
+}
+.content a:hover{
+  color:var(--card);
+  border-bottom-color:var(--ink);
+}
+
+/* ---- Section cards ---- */
+.card{
+  position:relative;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 28px 6px;
+  margin:0 0 24px;
+  transition:transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, border-color .4s ease;
+  box-shadow:0 1px 0 rgba(15,17,21,.02);
+}
+.card::before{
+  content:"";position:absolute;left:0;top:24px;bottom:24px;width:4px;
+  background:var(--card);opacity:.85;
+  border-radius:0 4px 4px 0;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+  border-color:#dcdee1;
+}
+.sec{
+  display:flex;align-items:flex-start;gap:15px;
+  margin:0 0 18px;
+}
+.num{
+  flex:0 0 auto;
+  width:46px;height:46px;border-radius:14px;
+  background:var(--card);color:#fff;
+  display:grid;place-items:center;
+  font-size:14px;font-weight:800;letter-spacing:.02em;
+  box-shadow:0 12px 24px -16px rgba(143,143,143,1);
+  transition:transform .4s cubic-bezier(.2,.7,.2,1), background .3s ease;
+}
+.card:hover .num{transform:rotate(-6deg) scale(1.05);background:var(--ink)}
+.sec-title{
+  margin:0;padding-top:4px;
+  font-size:clamp(1.12rem, 2.1vw, 1.42rem);
+  font-weight:800;color:var(--ink);
+  line-height:1.36;letter-spacing:-.012em;
+}
+
+/* ---- FAQ ---- */
+.faq{
+  background:var(--card-soft);
+  border:1px solid rgba(143,143,143,.30);
+  border-radius:16px;
+  padding:20px 22px;
+  margin:0 0 16px;
+  transition:transform .35s ease, box-shadow .35s ease, background .35s ease;
+}
+.faq:hover{
+  transform:translateX(4px);
+  background:rgba(143,143,143,.16);
+  box-shadow:0 14px 30px -24px rgba(15,17,21,.7);
+}
+.faq h3{
+  margin:0 0 8px;
+  font-size:1rem;font-weight:800;color:var(--ink);
+  line-height:1.45;letter-spacing:-.005em;
+}
+.faq p{
+  margin:0;
+  font-size:.965rem;
+  color:var(--body);
+}
+
+/* ---- Conclusion ---- */
+.conclusion{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:30px 28px 10px;
+  margin:14px 0 40px;
+  background:
+    linear-gradient(180deg, rgba(143,143,143,.10) 0%, rgba(255,255,255,0) 62%),
+    var(--white);
+  box-shadow:var(--shadow);
+}
+.conclusion h2{
+  margin:0 0 18px;
+  font-size:clamp(1.25rem, 2.6vw, 1.7rem);
+  font-weight:800;color:var(--ink);letter-spacing:-.015em;
+}
+
+/* ============ INTERLINKING CARD ============ */
+.related-wrap{
+  margin:0 0 46px;
+  padding-top:44px;
+  border-top:1px solid var(--line);
+}
+.related-label{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:10.5px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:18px;
+}
+.related-label .bar{
+  width:26px;height:2px;background:var(--card);border-radius:2px;
+}
+.related-card{
+  position:relative;
+  display:flex;align-items:center;gap:22px;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px 26px;
+  text-decoration:none;
+  overflow:hidden;
+  box-shadow:0 18px 42px -34px rgba(15,17,21,.55);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease, border-color .45s ease;
+}
+.related-card::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg, rgba(143,143,143,.16), rgba(143,143,143,0) 58%);
+  opacity:0;transition:opacity .45s ease;
+  pointer-events:none;
+}
+.related-card::after{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,var(--ink),var(--card));
+  transform:scaleY(.0);transform-origin:top;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.related-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 30px 60px -36px rgba(15,17,21,.75);
+  border-color:#d7d9dd;
+}
+.related-card:hover::before{opacity:1}
+.related-card:hover::after{transform:scaleY(1)}
+
+.related-thumb{
+  flex:0 0 auto;width:74px;height:74px;border-radius:16px;
+  overflow:hidden;border:2px solid var(--card);
+  box-shadow:0 12px 26px -18px rgba(15,17,21,.9);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.related-thumb img{width:100%;height:100%;object-fit:cover}
+.related-card:hover .related-thumb{transform:rotate(-4deg) scale(1.05)}
+
+.related-body{flex:1 1 auto;min-width:0}
+.related-kicker{
+  display:block;font-size:10px;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--card);margin-bottom:7px;
+}
+.related-title{
+  display:block;font-size:clamp(1rem, 2vw, 1.2rem);
+  font-weight:800;color:var(--ink);line-height:1.42;letter-spacing:-.01em;
+  transition:color .3s ease;
+}
+.related-card:hover .related-title{color:var(--ink-2)}
+.related-url{
+  display:block;font-size:.78rem;font-weight:600;color:var(--muted);
+  letter-spacing:.02em;margin-top:8px;
+  word-break:break-all;
+}
+
+.related-arrow{
+  flex:0 0 auto;
+  width:50px;height:50px;border-radius:50%;
+  background:var(--ink);color:#fff;
+  display:grid;place-items:center;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1), background .3s ease;
+}
+.related-arrow svg{width:19px;height:19px}
+.related-card:hover .related-arrow{
+  background:var(--card);transform:rotate(-45deg) scale(1.06);
+}
+
+/* ============ MAP ============ */
+.map-section{
+  margin:10px 0 46px;
+  padding-top:44px;
+  border-top:1px solid var(--line);
+}
+.map-head{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:20px;
+}
+.map-head h2{
+  margin:0;
+  font-size:clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight:800;color:var(--ink);letter-spacing:-.015em;
+}
+.map-pin{
+  width:46px;height:46px;border-radius:14px;
+  background:var(--ink);color:#fff;
+  display:grid;place-items:center;flex:0 0 auto;
+  box-shadow:0 14px 26px -18px rgba(15,17,21,.95);
+}
+.map-pin svg{width:20px;height:20px}
+.map-wrap{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:var(--white);
+  line-height:0;
+}
+.map-wrap iframe{
+  width:100%;
+  height:450px;
+  border:0;
+  display:block;
+  filter:grayscale(.14) contrast(1.02);
+}
+.map-note{
+  margin:16px 0 0;
+  font-size:.9rem;
+  color:var(--muted);
+  display:flex;align-items:center;gap:8px;
+}
+.map-note svg{width:15px;height:15px;flex:0 0 auto;color:var(--card)}
+
+/* ============ FOOTER ============ */
+.site-footer{
+  background:var(--ink);
+  color:#d8dade;
+  padding:56px 24px 34px;
+  margin-top:20px;
+}
+.footer-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:1.3fr 1fr 1fr;
+  gap:36px;
+}
+.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.footer-brand img{
+  width:56px;height:56px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--card);
+}
+.footer-brand strong{
+  display:block;color:#fff;font-size:14.5px;font-weight:800;line-height:1.35;
+}
+.footer-brand span{
+  display:block;font-size:10px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--card);margin-top:3px;
+}
+.footer-text{font-size:.9rem;color:#a5a9b0;margin:0;line-height:1.85;max-width:340px}
+.footer-col h4{
+  margin:0 0 14px;color:#fff;font-size:11px;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.footer-col p{margin:0 0 10px;font-size:.9rem;color:#a5a9b0;line-height:1.7}
+.footer-bottom{
+  max-width:var(--max);margin:36px auto 0;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.10);
+  font-size:.78rem;color:#7d828a;letter-spacing:.04em;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1);
+  will-change:opacity, transform;
+}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .header-inner{padding:11px 16px}
+  .brand img{width:40px;height:40px}
+  .brand-name{font-size:11.5px}
+  .brand-sub{font-size:9px;letter-spacing:.14em}
+  .btn-dark{padding:10px 16px;font-size:12px}
+  .btn-dark span{display:none}
+  .hero{padding:48px 18px 40px}
+  .content{padding:38px 18px 12px}
+  .card{padding:20px 18px 4px}
+  .card::before{top:18px;bottom:18px}
+  .num{width:40px;height:40px;border-radius:12px;font-size:12.5px}
+  .sec{gap:12px}
+  .conclusion{padding:24px 18px 8px}
+  .related-card{padding:20px 18px;gap:15px;flex-wrap:wrap}
+  .related-thumb{width:58px;height:58px;border-radius:13px}
+  .related-arrow{width:44px;height:44px}
+  .map-wrap iframe{height:340px}
+  .footer-inner{grid-template-columns:1fr;gap:26px}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <img src="https://images1.loopnet.com/i2/DgRmbTxWVXdMpvbHSEv7yqLHyOXFZMzsM3fZmtaLeJE/118/mike-santos.jpg" alt="Restaurant Broker | Commonwealth Company">
+      <span>
+        <span class="brand-name">Restaurant Broker | Commonwealth Company</span>
+        <span class="brand-sub">Charleston, SC</span>
+      </span>
+    </a>
+    <a class="btn-dark" href="tel:+18435778877">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>(843) 577-8877</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow reveal"><span class="dot"></span> Seller Value Guide</div>
+    <h1 class="reveal">How Can I Sell My Restaurant Without Losing Its True Business Value?</h1>
+    <div class="hero-meta reveal">
+      <span class="chip">Charleston, SC</span>
+      <span class="sep"></span>
+      <span class="chip">Valuation &amp; Preparation</span>
+      <span class="sep"></span>
+      <span class="chip">8 Key Steps</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARTICLE ================= -->
+<main class="content">
+
+  <p class="reveal"><a href="https://maps.app.goo.gl/wjzMtJhS1kpk29119" target="_blank" rel="noopener">Selling a restaurant</a> is a major business decision. After years of hard work, building customer relationships, and managing daily operations, you want to receive a fair return on your investment. However, many restaurant owners struggle to determine what their business is actually worth. Setting the wrong asking price or overlooking important details can reduce buyer interest and affect the final sale.</p>
+
+  <p class="reveal">If you are planning to sell my restaurant in Charleston SC, preparation should be your first priority. Buyers want to understand the restaurant's financial performance, reputation, location, and future potential. They also expect clear records and honest information before making an offer.</p>
+
+  <p class="reveal">Working with an experienced Restaurant Broker can help you understand the selling process. A professional can guide you through valuation, marketing, buyer communication, and negotiations. With the right preparation, you can protect your business value and make better decisions throughout the transaction.</p>
+
+  <!-- 01 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">01</span>
+      <h2 class="sec-title">Understand Your Restaurant's True Market Value</h2>
+    </div>
+    <p>The first step is understanding what your restaurant is worth. Many owners estimate value based on their original investment, personal effort, or emotional attachment. However, buyers usually focus on financial performance and future earning potential.</p>
+    <p>A professional valuation considers several factors. These include annual revenue, operating expenses, net income, equipment, inventory, location, lease conditions, and customer loyalty. The restaurant's reputation and growth opportunities may also influence buyer interest.</p>
+    <p>A Restaurant Business Broker can help review these details and explain how they affect the asking price. They can also compare similar business sales when reliable market information is available.</p>
+    <p>Avoid setting an unrealistic price based on assumptions. A well-supported valuation gives buyers more confidence and helps you protect the value you have built.</p>
+  </section>
+
+  <!-- 02 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">02</span>
+      <h2 class="sec-title">Organize Your Financial Records Before Listing</h2>
+    </div>
+    <p>Financial transparency can make a restaurant more attractive to serious buyers. Before listing your business, gather the records that explain its financial condition.</p>
+    <p>Buyers may request profit and loss statements, tax returns, sales reports, payroll records, supplier invoices, and expense summaries. They may also want to understand how revenue changes during different seasons.</p>
+    <p>Make sure your records are accurate and consistent. If there are unusual expenses or changes in revenue, prepare clear explanations. Missing documents can create doubt and slow down negotiations.</p>
+    <p>Consider asking an accountant to review your financial information before sharing it with potential buyers. Clean and organized records make it easier to demonstrate the restaurant's performance and support your asking price.</p>
+  </section>
+
+  <!-- 03 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">03</span>
+      <h2 class="sec-title">Improve Daily Operations Before Selling</h2>
+    </div>
+    <p>A restaurant with organized operations can attract stronger buyer interest. Buyers do not want to purchase a business that depends entirely on the current owner's daily involvement.</p>
+    <p>Review your staffing arrangements, supplier relationships, inventory management, and customer service procedures. Make sure employees understand their responsibilities and important operating processes are documented.</p>
+    <p>Look for problems that could affect daily performance. Unnecessary expenses, inconsistent service, and poor inventory control may reduce profitability. Addressing these issues before listing can improve the restaurant's overall presentation.</p>
+    <p>You do not need to make major changes just to sell your business. Focus on practical improvements that demonstrate stability. A restaurant with clear systems and consistent operations may be easier for a new owner to manage.</p>
+  </section>
+
+  <!-- 04 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">04</span>
+      <h2 class="sec-title">Maintain Your Restaurant's Reputation and Customer Base</h2>
+    </div>
+    <p>A strong reputation can make a restaurant more appealing to potential buyers. Customers who regularly visit your business provide valuable support for its long-term potential.</p>
+    <p>Before selling, continue focusing on food quality, customer service, cleanliness, and consistent operating standards. Avoid allowing service to decline simply because you are preparing to leave.</p>
+    <p>Online reviews can also influence buyer opinions. Review your restaurant's public feedback and address reasonable customer concerns. Keep your business information accurate across relevant online platforms.</p>
+    <p>A loyal customer base does not guarantee a higher sale value. However, it can help demonstrate that the restaurant has an established presence in the local market.</p>
+  </section>
+
+  <!-- 05 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">05</span>
+      <h2 class="sec-title">Present Your Restaurant Location and Property Clearly</h2>
+    </div>
+    <p>Location is an important consideration when evaluating a restaurant. Parking, visibility, nearby businesses, customer traffic, and neighborhood activity can influence its appeal.</p>
+    <p>Charleston has different commercial areas with different customer patterns. Buyers may consider nearby offices, residential communities, tourism activity, and competing restaurants when reviewing an opportunity.</p>
+    <p>If your sale includes property, Restaurant Commercial Real Estate becomes another important consideration. You should clearly explain whether the buyer is purchasing the operating business, leasing the space, or acquiring both.</p>
+    <p>A Commercial Real Estate Broker may help with property-related matters. However, business valuation and property valuation are not always the same. Understanding the difference helps prevent confusion during negotiations.</p>
+  </section>
+
+  <!-- 06 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">06</span>
+      <h2 class="sec-title">Prepare Your Equipment and Business Assets</h2>
+    </div>
+    <p>Restaurant equipment and physical assets can affect the overall attractiveness of your business. Buyers want to know what is included in the sale and whether those items are in usable condition.</p>
+    <p>Review your kitchen appliances, refrigerators, freezers, furniture, point-of-sale systems, and other equipment. Check for maintenance issues and identify anything that needs repair or replacement.</p>
+    <p>Prepare an accurate inventory of the assets included in the transaction. Clearly identify equipment that is leased, financed, or owned by another party. This can prevent disagreements later.</p>
+    <p>You should also organize information about inventory, supplies, and transferable contracts. Being transparent about your assets helps buyers understand what they will receive and supports a smoother transaction.</p>
+  </section>
+
+  <!-- 07 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">07</span>
+      <h2 class="sec-title">Choose the Right Restaurant Broker</h2>
+    </div>
+    <p>Selecting the right professional can make a difference in how your restaurant sale is handled. An experienced broker understands business valuation, buyer expectations, marketing, and negotiations.</p>
+    <p>Look for someone who has handled restaurant transactions and understands the Charleston market. Ask about their experience with similar businesses and how they identify qualified buyers.</p>
+    <p>A Restaurant Broker should also explain their services and communication process. You should understand how they will market your business, protect confidential information, and handle buyer inquiries.</p>
+    <p>Do not choose a broker based only on promises of a quick sale or an unusually high asking price. Look for practical knowledge, honest advice, and a clear selling strategy.</p>
+  </section>
+
+  <!-- 08 -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">08</span>
+      <h2 class="sec-title">Build a Strong Marketing and Negotiation Strategy</h2>
+    </div>
+    <p>Marketing plays an important role in finding the right buyer. A restaurant should be presented in a way that highlights its strengths without making unsupported claims.</p>
+    <p>Your listing may include the restaurant's concept, location, operating history, seating capacity, equipment, and general financial performance. Sensitive details should remain confidential until interested buyers complete the appropriate steps.</p>
+    <p>A broker can help reach suitable prospects through professional networks and business listing channels. The goal is to attract serious buyers who understand the opportunity.</p>
+    <p>Once offers arrive, compare more than the proposed purchase amount. Consider financing arrangements, contingencies, closing timelines, and the buyer's ability to complete the transaction. Strong negotiation can help you protect your interests without losing sight of the business's true value.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="card reveal">
+    <div class="sec">
+      <span class="num">?</span>
+      <h2 class="sec-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq">
+      <h3>1. How Do I Know What My Restaurant Is Worth Before Selling?</h3>
+      <p>Review your financial performance, assets, equipment, location, and lease conditions. A professional business valuation can help establish a realistic asking price based on available records and market conditions.</p>
+    </div>
+
+    <div class="faq">
+      <h3>2. Should I Hire a Restaurant Broker to Sell My Business?</h3>
+      <p>A restaurant broker can help with valuation, marketing, buyer screening, and negotiations. Their experience may also help you avoid common mistakes during the selling process.</p>
+    </div>
+
+    <div class="faq">
+      <h3>3. How Long Does It Take to Sell a Restaurant in Charleston SC?</h3>
+      <p>The timeline depends on the asking price, business condition, buyer interest, financing, and due diligence. Proper preparation can help reduce delays, but no broker can guarantee a specific selling timeline.</p>
+    </div>
+
+    <div class="faq">
+      <h3>4. What Financial Documents Do Buyers Usually Request?</h3>
+      <p>Buyers commonly request tax returns, profit and loss statements, sales reports, payroll records, and operating expense details. They may also review lease agreements and equipment records.</p>
+    </div>
+
+    <div class="faq">
+      <h3>5. Can I Sell My Restaurant Without Selling the Property?</h3>
+      <p>Yes. You may be able to sell the operating business while transferring or assigning the lease, subject to the lease terms and landlord approval. Review the arrangement with qualified legal and real estate professionals.</p>
+    </div>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section class="conclusion reveal">
+    <h2>Conclusion</h2>
+    <p>Selling a restaurant without losing its true business value requires careful preparation and informed decisions. Start by understanding your financial position and organizing important records. Improve daily operations, maintain your reputation, and present your assets and location clearly.</p>
+    <p><a href="http://thecommonwealthcompany.com/" target="_blank" rel="noopener">Restaurant Broker | Commonwealth Company</a> understands that selling a restaurant involves more than finding a buyer. It requires a clear strategy and attention to important business details. Whether you are preparing to sell my restaurant in Charleston SC or exploring your next opportunity, professional guidance can help you navigate the process with confidence. Focus on accurate information and fair negotiations to support a successful business sale.</p>
+  </section>
+
+  <!-- ================= INTERLINKING ================= -->
+  <section class="related-wrap reveal">
+    <div class="related-label"><span class="bar"></span> Continue Reading</div>
+
+    <a class="related-card" href="https://restaurant-business-broker.seosites.workers.dev/" target="_blank" rel="noopener">
+      <span class="related-thumb">
+        <img src="https://images1.loopnet.com/i2/DgRmbTxWVXdMpvbHSEv7yqLHyOXFZMzsM3fZmtaLeJE/118/mike-santos.jpg" alt="Restaurant Broker | Commonwealth Company">
+      </span>
+
+      <span class="related-body">
+        <span class="related-kicker">Related Article</span>
+        <span class="related-title">How Can a Restaurant Business Broker Protect Buyers From Bad Deals?</span>
+        <span class="related-url">https://restaurant-business-broker.seosites.workers.dev/</span>
+      </span>
+
+      <span class="related-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </section>
+
+  <!-- ================= MAP ================= -->
+  <section class="map-section reveal" id="find-us">
+    <div class="map-head">
+      <span class="map-pin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
+      <h2>Find Us on Google Maps</h2>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.880183520574!2d-79.93255720740918!3d32.78029869417522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe7a11696cbbef%3A0x572e5745a57fa762!2s5%20Clifford%20St%2C%20Charleston%2C%20SC%2029401%2C%20USA!5e1!3m2!1sen!2s!4v1794850894740!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <p class="map-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+      Restaurant Broker | Commonwealth Company — 171 Church St #300, Charleston, SC 29401, United States
+    </p>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="https://images1.loopnet.com/i2/DgRmbTxWVXdMpvbHSEv7yqLHyOXFZMzsM3fZmtaLeJE/118/mike-santos.jpg" alt="Restaurant Broker | Commonwealth Company">
+        <span>
+          <strong>Restaurant Broker | Commonwealth Company</strong>
+          <span>Charleston, SC</span>
+        </span>
+      </div>
+      <p class="footer-text">Helping Charleston restaurant owners protect business value through accurate valuation, organized records, strong marketing, and fair negotiation.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>171 Church St #300,<br>Charleston, SC 29401,<br>United States</p>
+      <p>(843) 577-8877</p>
+      <p>commonwealthjimm@prodigy.net</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Business Hours</h4>
+      <p>Monday – Friday<br>9:00 AM – 5:00 PM</p>
+      <p>Weekend visits by appointment.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Restaurant Broker | Commonwealth Company. All rights reserved.</span>
+    <span>Charleston, South Carolina</span>
+  </div>
+</footer>
+
+<script>
+/* ---------- Reading progress ---------- */
+(function(){
+  var bar = document.getElementById('progress');
+  function update(){
+    var h = document.documentElement;
+    var scrolled = h.scrollTop || document.body.scrollTop;
+    var height = h.scrollHeight - h.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+})();
+
+/* ---------- Scroll reveal ---------- */
+(function(){
+  var items = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+
+  items.forEach(function(el, i){
+    el.style.transitionDelay = (Math.min(i, 6) * 55) + 'ms';
+    io.observe(el);
+  });
+})();
+
+/* ---------- Year ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
